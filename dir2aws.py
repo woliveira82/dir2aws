@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import sys, getopt
+from classes import *
 
 
 def main(argv):
@@ -14,6 +15,7 @@ def main(argv):
          print('Help me!')
       elif opt in ('-d', '--dir'):
          print('Sending file: {}'.format(arg))
+         Aws().uploadDir(arg)
 
 
 if __name__ == '__main__':
